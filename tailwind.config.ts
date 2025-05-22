@@ -64,10 +64,10 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				investment: {
-					navy: '#0a2540',
-					gold: '#f5b841',
+					navy: '#1e88e5', // Updated to blue from navy
+					gold: '#42a5f5', // Updated to lighter blue from gold
 					profit: '#4CAF50',
-					lightGray: '#f7f9fb'
+					lightGray: '#f0f8ff' // Updated to lighter blue-tinted gray
 				}
 			},
 			borderRadius: {

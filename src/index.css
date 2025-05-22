@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -114,7 +113,7 @@
 }
 
 .cta-button-secondary {
-  @apply bg-investment-gold text-investment-navy font-semibold py-3 px-6 rounded-lg 
+  @apply bg-investment-gold text-white font-semibold py-3 px-6 rounded-lg 
          hover:bg-opacity-90 transition-all duration-200 shadow-sm;
 }
 
