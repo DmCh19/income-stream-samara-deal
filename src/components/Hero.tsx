@@ -20,17 +20,17 @@ const Hero = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Готовый бизнес с пассивным доходом
             </h1>
-            <p className="text-xl opacity-90">
-              Получайте стабильный доход <span className="highlight">уже завтра</span> — объект с арендаторами, 
+            <p className="text-xl opacity-90 text-gray-100">
+              Получайте стабильный доход <span className="highlight font-normal text-amber-500">уже завтра</span> — объект с арендаторами, 
               договорами и управлением «под ключ»
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button onClick={scrollToContact} className="cta-button">
+              <Button onClick={scrollToContact} className="cta-button bg-amber-500 hover:bg-amber-400 text-slate-950">
                 Оставить заявку
               </Button>
-              <Button variant="outline" className="border-white text-white hover:bg-white hover:bg-opacity-10" onClick={() => document.getElementById('property-details')?.scrollIntoView({
+              <Button variant="outline" onClick={() => document.getElementById('property-details')?.scrollIntoView({
               behavior: 'smooth'
-            })}>
+            })} className="border-white hover:bg-opacity-10 text-slate-900 bg-amber-500 hover:bg-amber-400">
                 Узнать детали
               </Button>
             </div>
