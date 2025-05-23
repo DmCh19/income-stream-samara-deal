@@ -17,6 +17,14 @@ const PropertyDetails = () => {
               </div>
               <p className="font-medium text-lg mb-2">г. Самара, улица Победы</p>
               <p className="text-gray-600">1 этаж, высокий пешеходный трафик</p>
+              
+              <div className="mt-4 rounded-lg overflow-hidden">
+                <img 
+                  src="/lovable-uploads/0da11d18-870f-4bc6-a0a1-edb33f3f526e.png" 
+                  alt="Вид на помещение с улицы Победы" 
+                  className="w-full h-auto rounded-lg object-cover"
+                />
+              </div>
             </div>
             
             <div className="bg-investment-lightGray rounded-xl p-6">
@@ -100,17 +108,40 @@ const PropertyDetails = () => {
               </div>
             </div>
             
-            <div className="mt-8 flex items-center justify-center">
-              <a 
-                href="#financial-breakdown" 
-                className="flex items-center gap-2 text-investment-navy font-medium hover:text-investment-gold transition-colors"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('financial-breakdown')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-              >
-                Подробнее о финансах <ArrowRight className="h-4 w-4" />
-              </a>
+            <div className="mt-8">
+              <div className="rounded-lg overflow-hidden mb-4">
+                <img 
+                  src="/lovable-uploads/6bdeb402-c9dd-4d89-89c3-daa88503dcb9.png" 
+                  alt="Вход в помещение с улицы Победы" 
+                  className="w-full h-auto object-cover"
+                />
+                <div className="bg-blue-50 p-2 text-sm text-blue-800">
+                  <div className="flex justify-between mt-2">
+                    <div className="flex items-center gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 20V6a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14"/><path d="M2 20h20"/><path d="M14 12v.01"/></svg>
+                      <span>2 входа</span>
+                    </div>
+                    
+                    <div className="flex items-center gap-1">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9"/><path d="m13 2 7 7"/></svg>
+                      <span>Свободная планировка</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div className="flex items-center justify-center">
+                <a 
+                  href="#financial-breakdown" 
+                  className="flex items-center gap-2 text-investment-navy font-medium hover:text-investment-gold transition-colors"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById('financial-breakdown')?.scrollIntoView({ behavior: 'smooth' });
+                  }}
+                >
+                  Подробнее о финансах <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

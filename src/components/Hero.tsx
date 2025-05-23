@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -45,7 +46,7 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:flex flex-col gap-4">
             <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-blue-300 border-opacity-30">
               <div className="flex justify-between items-center pb-4 border-b border-white border-opacity-20">
                 <div>
@@ -73,6 +74,52 @@ const Hero = () => {
                   </div>
                 </div>
               </div>
+            </div>
+            
+            {/* Property images */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-xl overflow-hidden border border-blue-300 border-opacity-30">
+                <AspectRatio ratio={16/10} className="bg-blue-800">
+                  <img 
+                    src="/lovable-uploads/0da11d18-870f-4bc6-a0a1-edb33f3f526e.png" 
+                    alt="Вид на помещение с улицы Победы с высоким пешеходным трафиком" 
+                    className="object-cover w-full h-full"
+                  />
+                </AspectRatio>
+              </div>
+              <div className="rounded-xl overflow-hidden border border-blue-300 border-opacity-30">
+                <AspectRatio ratio={16/10} className="bg-blue-800">
+                  <img 
+                    src="/lovable-uploads/6bdeb402-c9dd-4d89-89c3-daa88503dcb9.png" 
+                    alt="Вход в помещение с улицы Победы" 
+                    className="object-cover w-full h-full"
+                  />
+                </AspectRatio>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Mobile images - shown only on small screens */}
+        <div className="mt-8 md:hidden">
+          <div className="space-y-4">
+            <div className="rounded-xl overflow-hidden border border-blue-300 border-opacity-30">
+              <AspectRatio ratio={16/10} className="bg-blue-800">
+                <img 
+                  src="/lovable-uploads/0da11d18-870f-4bc6-a0a1-edb33f3f526e.png" 
+                  alt="Вид на помещение с улицы Победы с высоким пешеходным трафиком" 
+                  className="object-cover w-full h-full"
+                />
+              </AspectRatio>
+            </div>
+            <div className="rounded-xl overflow-hidden border border-blue-300 border-opacity-30">
+              <AspectRatio ratio={16/10} className="bg-blue-800">
+                <img 
+                  src="/lovable-uploads/6bdeb402-c9dd-4d89-89c3-daa88503dcb9.png" 
+                  alt="Вход в помещение с улицы Победы" 
+                  className="object-cover w-full h-full"
+                />
+              </AspectRatio>
             </div>
           </div>
         </div>
