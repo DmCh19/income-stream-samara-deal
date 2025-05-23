@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+
 const Hero = () => {
   const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
@@ -10,37 +12,45 @@ const Hero = () => {
       });
     }
   };
-  return <div className="bg-investment-navy text-white min-h-[80vh] flex items-center relative">
-      <div className="section-container">
+
+  return (
+    <div className="bg-gradient-to-b from-blue-500 to-blue-600 text-white min-h-[80vh] flex items-center relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-20 right-20 w-40 h-40 rounded-full bg-blue-300"></div>
+        <div className="absolute bottom-20 left-20 w-64 h-64 rounded-full bg-blue-300"></div>
+      </div>
+
+      <div className="section-container relative z-10">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in space-y-6">
-            <div className="inline-block px-4 py-1 rounded-full bg-investment-gold bg-opacity-20 text-investment-gold font-semibold text-sm mb-4">
+            <div className="inline-block px-4 py-1 rounded-full bg-blue-400 bg-opacity-20 text-white font-semibold text-sm mb-4 border border-blue-300 border-opacity-30">
               Инвестиционная возможность
             </div>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Готовый бизнес с пассивным доходом
             </h1>
             <p className="text-xl opacity-90 text-gray-100">
-              Получайте стабильный доход <span className="highlight font-normal text-amber-500">уже завтра</span> — объект с арендаторами, 
+              Получайте стабильный доход <span className="text-white font-semibold">уже завтра</span> — объект с арендаторами, 
               договорами и управлением «под ключ»
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <Button onClick={scrollToContact} className="cta-button bg-amber-500 hover:bg-amber-400 text-slate-950">
+              <Button onClick={scrollToContact} className="cta-button bg-white hover:bg-blue-50 text-blue-600 hover:text-blue-700">
                 Оставить заявку
               </Button>
               <Button variant="outline" onClick={() => document.getElementById('property-details')?.scrollIntoView({
               behavior: 'smooth'
-            })} className="border-white hover:bg-opacity-10 text-slate-900 bg-amber-500 hover:bg-amber-400">
+            })} className="border-white text-white hover:bg-white hover:bg-opacity-10">
                 Узнать детали
               </Button>
             </div>
           </div>
           <div className="hidden md:block">
-            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl shadow-xl">
+            <div className="bg-white bg-opacity-10 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-blue-300 border-opacity-30">
               <div className="flex justify-between items-center pb-4 border-b border-white border-opacity-20">
                 <div>
                   <p className="text-sm opacity-80">Чистый доход в месяц</p>
-                  <p className="text-3xl font-bold text-amber-500">41 900 ₽</p>
+                  <p className="text-3xl font-bold text-white">41 900 ₽</p>
                 </div>
                 <div>
                   <p className="text-sm opacity-80">Окупаемость</p>
@@ -50,15 +60,15 @@ const Hero = () => {
               <div className="pt-4">
                 <div className="space-y-3">
                   <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-investment-gold"></div>
+                    <div className="h-2 w-2 rounded-full bg-blue-300"></div>
                     <p>3 действующих бизнеса</p>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-investment-gold"></div>
+                    <div className="h-2 w-2 rounded-full bg-blue-300"></div>
                     <p>Полное юридическое сопровождение</p>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-investment-gold"></div>
+                    <div className="h-2 w-2 rounded-full bg-blue-300"></div>
                     <p>Обеспечительные платежи в подарок</p>
                   </div>
                 </div>
@@ -70,6 +80,8 @@ const Hero = () => {
       <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">
         <ArrowDown className="h-10 w-10 opacity-60" />
       </div>
-    </div>;
+    </div>
+  );
 };
+
 export default Hero;
